@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.zeroturnaround.com">
+  <classpath>
+    <dir name="C:\CXCOMCL221100P_3-70007431\hybris\bin\custom\grocerystore\grocerystorebackoffice/backoffice/classes" />
+  </classpath>
+</application>
