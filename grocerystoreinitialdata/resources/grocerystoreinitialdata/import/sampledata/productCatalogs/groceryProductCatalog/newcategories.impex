@@ -1,0 +1,79 @@
+# Macros / Replacement Parameter definitions
+
+$productCatalog=groceryProductCatalog
+
+$productCatalogName=Grocery Product Catalog
+
+ 
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+
+$supercategories=source(code, $catalogVersion)[unique=true]
+
+$categories=target(code, $catalogVersion)[unique=true]
+$lang=en
+
+
+# Insert Categories
+INSERT_UPDATE Category;code[unique=true];allowedPrincipals(uid)[default='customergroup'];$catalogVersion
+ ;G001
+ ;G002
+ ;G003
+ ;G004
+ ;G005
+
+# Insert Category Structure
+INSERT_UPDATE CategoryCategoryRelation;$categories;$supercategories
+;S0001;G001
+;S0002;G001
+;S0003;G001
+;S0004;G001
+;S0005;G002
+;S0006;G002
+;S0007;G002
+;S0008;G002
+;S0009;G003
+;S0010;G003
+;S0011;G003
+;S0012;G003
+;S0013;G004
+;S0014;G004
+;S0015;G004
+;S0016;G004
+;S0017;G005
+;S0018;G005
+;S0019;G005
+;S0020;G005
+
+
+# Create Categories
+INSERT_UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang]
+;G001;;Beverages
+;G002;;Cleaning Essentials
+;G003;;Cooking Essentials
+;G004;;Fruits and Vegetables
+;G005;;Packed Foods
+;S0001;;Energy Drinks
+;S0002;;Soft Drinks
+;S0003;;Milkshakes
+;S0004;;Fruit Juices
+;S0005;;Bath and Body
+;S0006;;Floor Cleaners
+;S0007;;Detergents
+;S0008;;Kitchen Cleaners
+;S0009;;Masala
+;S0010;;Rice
+;S0011;;Dal and Pulses
+;S0012;;Oils
+;S0013;;Fresh Vegetables
+;S0014;;Fresh Fruits
+;S0015;;Cutted Fruits
+;S0016;;Herbs
+;S0017;;Snacks
+;S0018;;Pickles
+;S0019;;Morning Starters
+;S0020;;Pasta and More
+
+
+
+

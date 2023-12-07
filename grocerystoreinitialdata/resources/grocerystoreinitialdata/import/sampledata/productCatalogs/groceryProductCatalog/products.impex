@@ -1,0 +1,96 @@
+# ImpEx for Importing Products
+
+# Macros / Replacement Parameter definitions
+$productCatalog=groceryProductCatalog
+$productCatalogName=Grocery Product Catalog
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$supercategories=supercategories(code, $catalogVersion)
+$baseProduct=baseProduct(code,$catalogVersion)
+$approved=approvalstatus(code)[default='approved']
+
+# Insert Products
+INSERT_UPDATE GroceryStoreProduct;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);countryOrigin;weight;weightUnit;shelfLife;brandName;ean;variantType(code);$catalogVersion;$approved
+
+;P00001;S0001;Hindustan Coca Cola Beverages;;pieces;India;350;Milliliter;24 months;Monster
+;P00002;S0001;PepsiCo India Holdings;;pieces;India;250;Milliliter;12 months;Sting
+;P00003;S0001;Red Bull India;;pieces;India;250;Milliliter;12 months;Red Bull
+
+;P00004;S0002;HINDUSTAN COCA-COLA BEVERAGES;;pieces;India;300;Milliliter;9 months;Coco Cola
+;P00005;S0002;HINDUSTAN COCA-COLA BEVERAGES;;pieces;India;300;Milliliter;7 months;Sprite
+;P00006;S0002;HINDUSTAN COCA-COLA BEVERAGES;;pieces;India;300;Milliliter;8 months;Thums Up
+
+;P00007;S0003;Frozen Milkshakes;;pieces;India;250;Milliliter;7 days;Frozen Milkshakes
+;P00008;S0003;Cavinkare;;pieces;India;180;Milliliter;7 days;Cavins
+;P00009;S0003;Hershey India;;pieces;India;180;Milliliter;7 days;Hershey's
+
+;P00010;S0004;Dabur India Limited;;pieces;India;1;Liter;7 months;Real
+;P00011;S0004;ITC Limited;;pieces;India;1;Liter;6 months;B Natural
+;P00012;S0004;Rakyan Beverages;;pieces;India;250;Milliliter;6 months;RAW Pressery
+
+;P00013;S0005;Biotique;;pieces;India;340;Milliliter;36 months;Biotique
+;P00014;S0005;Himalaya Wellness Company;;pieces;India;150;Milliliter;36 months;Himalaya
+;P00015;S0005;Bajaj Corp Limited;;pieces;India;650;Milliliter;36 months;Biotique
+
+;P00016;S0006;Reckitt Benckiser;;pieces;India;1;Liter;24 months;Lizol
+;P00017;S0006;Reckitt Benckiser;;pieces;India;200;Milliliter;24 months;Dettol
+;P00018;S0006;Reckitt Benckiser;;pieces;India;500;Milliliter;24 months;Colin
+
+;P00019;S0007;Procter & Gamble;;pieces;India;1;kilogram;12 months;Ariel
+;P00020;S0007;Hindustan Unilever Ltd;;pieces;India;1;kilogram;24 months;Surf Excel
+;P00021;S0007;Hindustan Unilever Limited;;pieces;India;1;kilogram;24 months;Rin
+
+;P00022;S0008;Jyothy Laboratories;;pieces;India;250;Grams;24 months;Exo
+;P00023;S0008;Hindustan Unilever Limited;;pieces;India;250;Milliliter;24 months;Vim
+;P00024;S0008;MK Industries;;pieces;India;500;Grams;36 months;Dew
+
+;P00025;S0009;MTR Foods;;pieces;India;100;Grams;12 months;MTR
+;P00026;S0009;Everest Food Products;;pieces;India;100;Grams;15 months;Everest
+;P00027;S0009;Eastern Condiments;;pieces;India;100;Grams;12 months;Eastern
+
+;P00028;S0010;KRBL Ltd;;pieces;India;5;kilogram;12 months;India Gate
+;P00029;S0010;Adani Wilmar Ltd;;pieces;India;5;kilogram;24 months;Fortune 
+;P00030;S0010;Nutritious;;pieces;India;5;kilogram;101 days;Nutritious
+
+;P00031;S0011;Safe Harvest Pvt Limited;;pieces;India;500;Gram;10 months;Safe Harvest
+;P00032;S0011;Congruence Trade and Services;;pieces;India;500;Gram;120 months;Town Grocer
+;P00033;S0011;Popular Essentials Inc;;pieces;India;500;Gram;6 months;Popular
+
+;P00034;S0012;Gemini Edibles & Fats India;;pieces;India;1;Liter;9 months;Freedom
+;P00035;S0012;Ameya Foods;;pieces;India;1;Liter;9 months;Saffola
+;P00036;S0012;Mehrotra Consumer Products;;pieces;India;1;Liter;9 months;Organic Tattva
+
+;P00037;S0013;;;pieces;India;500;Grams;7 days;Organic
+;P00038;S0013;;;pieces;India;500;Grams;7 days;Organic
+;P00039;S0013;;;pieces;India;500;Grams;7 days;Organic
+
+;P00040;S0014;;;pieces;India;500;Grams;7 days;Organic
+;P00041;S0014;;;pieces;India;500;Grams;7 days;Organic
+;P00042;S0014;;;pieces;India;500;Grams;7 days;Organic
+
+;P00043;S0015;;;pieces;India;500;Grams;7 days;Organic
+;P00044;S0015;;;pieces;India;500;Grams;7 days;Organic
+;P00045;S0015;;;pieces;India;500;Grams;7 days;Organic
+
+;P00046;S0016;;;pieces;India;500;Grams;7 days;Organic
+;P00047;S0016;;;pieces;India;500;Grams;7 days;Organic
+;P00048;S0016;;;pieces;India;500;Grams;7 days;Organic
+
+;P00049;S0017;PepsiCo India Holdings;;pieces;India;91;Grams;6 months;Doritos
+;P00050;S0017;Haldiram Snacks;;pieces;India;400;Grams;8 months;Haldiram's
+;P00051;S0017;Kelloggs India Pvt Ltd;;pieces;India;134;Grams;12 months;Pringles
+
+;P00052;S0018;Swastick;;pieces;India;500;Grams;12 months;Swastiks
+;P00053;S0018;Keya Foods;;pieces;India;270;Grams;12 months;Keya 
+;P00054;S0018;Priya Foods;;pieces;India;300;Grams;12 months;Priya
+
+;P00055;S0019;Kelloggs India Pvt Ltd;;pieces;India;250;Grams;9 months;Kellogg's
+;P00056;S0019;Mother Nutri Foods;;pieces;India;1;kilogram;12 months;Alpino
+;P00057;S0019;Britannia Industries Limited;;pieces;India;400;Grams;7 days;Britannia
+
+;P00058;S0020;ITC Limited;;pieces;India;120;Grams;8 months;Sunfeast
+;P00059;S0020;BORGES;;pieces;India;500;Grams;36 months;Borges
+;P00060;S0020;MTR Foods;;pieces;India;500;Grams;12 months;MTR
+
+
+
