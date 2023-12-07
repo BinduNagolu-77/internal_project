@@ -1,0 +1,137 @@
+# -----------------------------------------------------------------------
+# Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+# -----------------------------------------------------------------------
+# ImpEx for Importing Product Localisations
+ 
+# Macros / Replacement Parameter definitions
+$productCatalog=groceryProductCatalog
+$productCatalogName=Grocery Product Catalog
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+
+# Language
+$lang=en
+
+# Update allProducts with localisations
+UPDATE GroceryStoreProduct;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
+;P00001;;Monster Energy Drink;Monster Energy Drink;Ideal combo of the right ingredients in the right proportion.Powerful & edgy.Smooth easy drinking flavor.Available in lo-carb and zero sugar.
+
+;P00002;;Sting Energy Drink;Sting energy Drink;Sting energy drink gives you an energy boost to charge up and keep you going. It also invigorates your taste buds with its refreshingly delicious flavour. Sting has the kick of Caffeine, Ginseng and B Vitamins with amazingly refreshing flavours.
+
+;P00003;;Red Bull;Red Bull;Red Bull Energy Drink is a functional beverage and its formula contains high quality ingredients: Caffeine, Taurine, some B-group Vitamins, Sugars and Alpine water.
+
+;P00004;;Coca Cola;Coca Cola;Happiness is all about creating Real Magic from everyday moments spent together with family or friends. Turn up the energy during an afternoon lull, sweltering heat and long exhausting days with the crisp, delicious taste of Coca-Cola Original that is uplifting till the last sip. Make meals tastier with Coke, be it peri-peri or extra cheese.
+
+;P00005;;Sprite;Sprite;Refreshing people since 1999, Sprite is known for its straightforward attitude. The brand strongly believes in removing all the unnecessary Bakwaas from your life so that you can chill for real. Days full of work pressure, frustration and scoffing can make life stressful. Release all the stress with Sprite soft drink and restart with a clear head.
+
+;P00006;;Thums Up;Thums Up;Thums Up is well-known for its strong, fizzy flavor and its secure, mature and distinctively masculine attitude. A glass soft drink goes well with any variety of food and any type of mood.
+
+;P00007;;Chocolate Milkshake;Chocolate Milkshake;Chocolate is the most convenient and delicious way to add to your daily protein intake.Frozen Milkshakes are naturally flavoured without any preservatives and contains less sugar. This chocolate milkshake is an easy and delicious approach to increasing your protein intake on a regular basis. It is smooth, creamy, and made from the best quality cocao, making it the perfect guilt-free pleasure for health-conscious snackers. 
+
+;P00008;;Mango Milkshake;Mango Milkshake;Cavin's Mango Milkshakes are thick and creamy flavoured shakes fortified with the goodness of milk and mango to make every sip irresistibly delightful. It is enriched with fruit pulp to make it even more delicious. It is a healthy mid-meal snack that will provide your children with an instant source of energy. It is now fortified with Zinc for immune support and is a good source of Calcium, Vitamin A, and Vitamin D for strong bones and teeth.
+
+;P00009;;Strawberry MilkShake;Strawberry MilkShake;HERSHEY'S Milkshake is delicious, thick and creamy and comes in 6 exciting flavors! Enriched with 40% more calcium than Cow's Milk, the goodness of Zinc and Vitamins support a healthy lifestyle. HERSHEY'S Milkshake contains no artificial preservatives, making it a healthier choice. It is the perfect partner for on-the-go snacking or as a refreshing treat at home or work.  It can be enjoyed chilled or at room temperature and comes in convenient tetra pack packaging, making it super easy to store. It's great for kids and adults, with a fun and flavorful twist on classic milkshakes.
+
+;P00010;;Grape Juice;Grape Juice;Real Fruit Power Grape juice is loaded with the goodness of Potassium and Calcium from grapes. It is prepared from the best quality sweet grapes to make sure that it lives up to its consistency and quality all around the year, with every pack you pick up. It is a refreshing natural drink that is best served chilled. Best suited for a relaxing break during a hot afternoon or after a strenuous day at play, Real Grape juice is a real boon for children with its health benefits and great taste. It comes in a six-layered Tetra-Pak for added protection from germs and external factors such as air and sunlight.
+
+;P00011;;Orange Juice;Orange Juice;As fresh as the dew drops on leaves, B Natural Orange brings the goodness of fruit and fibre in a thick and pulpy juice. B Natural Orange fruit juice has been crafted to near perfection, using only the finest oranges that have been handpicked from the orchards of local Indian farmers. Each sip of this fruit juice effortlessly captures the taste and essence of a fruit that we all love and cherish. Relish an authentic fruit experience as B Natural Orange is made with 100% fruit and 0% concentrate, and no added preservatives. With the goodness of fibre and Vitamin C & E, B Natural ensures complete fruit nutrition for you and your family. 
+
+;P00012;;Mango Juice;Mango Juice;Our 100% natural cold-pressed fresh and delicious mango juice ensures you get the same taste with all the nutrients, all year round. It's high fiber, great source of vitamin A and C. This juice lowers blood pressure, maintains healthy gut, boosts iron level.
+
+;P00013;;Biotique Ocean Kelp Shampoo;Biotique Ocean Kelp Shampoo;This nourishing shampoo is a blend of pure kelp, natural proteins, peppermint oil and mint leaf extract, to gently cleanse hair and invigorate the scalp for fresh growth and healthier shine.Kelp - High in vitamins and minerals and known for hair growth and strengthening properties. Neem - Medicinal properties, controls dandruff and invigorates the scalp. Bhringraj - Prevents hair loss and premature greying, and keeps hair shining with health.
+
+;P00014;;Himalaya Neem Face Wash;Himalaya Neem Face Wash;Himalaya Purifying Neem Face Wash is a soap-free, herbal formulation that cleans impurities and helps clear pimples. A natural blend of Neem and Turmeric bring together their antibacterial and antifungal properties to prevent the recurrence of acne over time. 
+
+;P00015;;Bajaj Almond Drops Hair Oil;Bajaj Almond Drops Hair Oil;Now style your hair any way you want without the fear of hair fall, as Bajaj Almond Drops hair oil has your back! Bajaj Almond Oil can reduce hair fall by up to 79%*, strengthen hair, and make them up to 50% more shiny! The new and improved Bajaj Almond Drops Hair Oil is enriched with 6x Vitamin E^ & Almond Oil to help you get the shiny, strong hair you've always wanted.This oil for hair falls reduction works to strengthen and nourish your hair and, as a result, reduce hair fall due to breakage. It is light, non-sticky and the perfect hair growth solution. So don't wait to flaunt beautiful hair, that is strong inside and shiny outside, with new hairstyles every day!
+
+;P00016;;Lizol Disinfectant Surface and Floor Cleaner;Lizol Disinfectant Surface and Floor Cleaner;Lizol is India's No.1 Household Cleaning Brand, highly recommended by the Indian Medical Association. Lizol guarantees to kill 99.99% of disease-causing bacteria as well as germs while leaving your room smelling fragrant with a wide variety of aromas. Suitable for household with pets.^ This cleaner removes 100 types of Stains & Germs and leaves a Pleasant Fragrance. Available Variants are Pine, Floral, Citrus, Jasmine, Lavender, Sandal and Neem.
+
+;P00017;;Dettol Lime Disinfectant Floor Cleaner;Dettol Lime Disinfectant Floor Cleaner;Dettol Disinfectant Multipurpose Liquid cleaner provides protection to you and your family against illness-causing germs and Coronavirus causing COVID19 virus. Proven to be greater than 99.9% effective at inactivating SARS-CoV-2, the virus that causes COVID19, when used at 1:12 dilutions with 5 minutes contact time when tested under dirty conditions; As per standard testing protocol. This disinfectant liquid sanitizes your home and also helps maintain your personal hygiene. It can be used in bath, laundry, floor and surface cleaning, leaving everything clean and fresh. This multipurpose disinfectant cleaner for home is recommended by the Indian Medical Association.
+
+;P00018;;Colin Glass and Surface Cleaner Liquid Spray;Colin Glass and Surface Cleaner Liquid Spray;Colin Glass Cleaner and Surface Cleaner is an all-round household cleaner that keeps your glass surfaces looking like new. It contains vinegar as one of its main ingredients. Vinegar is known for its strong cleansing action that not only removes the dust but makes them simply spick and span. The surface cleaner provides streak free shine and is not too harsh on the skin. Colin has a fragrant formula does not bother your nose. Its convenient trigger helps you spray directly on the stains for maximum effectiveness.
+
+;P00019;;Ariel Detergent Washing Powder;Ariel Detergent Washing Powder;Recommended by top washing machine brands like Whirpool, LG, Panasonic, and so on the new & Improved Ariel Matic gives you tough stain removal in just 1 wash. Specially designed to be used in front-loading machines, Ariel Matic Front Load offers brilliant stain removal for full loads. It also provides deep down cleaning and long-lasting freshness. Formulated specifically for fully automatic washing machines, it generates the right amount of foam in the machine to deliver superior cleaning inside the machine itself, without damaging the machine due to excess foam. It requires just 1 scoop for normal loads, and 1.5 scoops for heavy loads, providing performance along with the value. Ariel Matic's cutting-edge technology provides impeccable cleaning for all your clothes and removes tough stains like juice, chocolate, tomato, and butter/ghee. Along with its new bright guard technology in Ariel Matic ensures that clothes remain bright even wash after wash and provides tough stain removal for a bright clean in 1 wash.
+
+;P00020;;Surf Excel Easy Wash Detergent Powder;Surf Excel Easy Wash Detergent Powder;With Surf excel Easy Wash, now remove tough stains easily with the power of ten hands. We understand that washing clothes and removing stains can be extremely tiring and cumbersome. Especially if you are a mother of a young kid who fills your laundry basket with clothes covered in an array of stains, grass stains from football practice, ketchup stains from lunch and paint stains from art class. Until now you would have to soak your childs dirty clothes for a couple of hours and then scrub them with your hands using a brush and a bar, and wondered why it takes so much time and effort to remove stains from your kids clothes? The answer is because regular detergents do not dissolve completely and dont work as effectively. Surf excel Easy Wash is a superfine powder that removes tough stains in a jiffy and leaves no residue on your clothes. Being a superfine and fluffy powder it dissolves easily and reaches the stain and removes it easily. Its engineered formula with a superior technology unleashes the power of 10 Hands that is effective in removing toughest of the stains such as mud, ink, oil, ketchup, curry stain and chocolate very easily.
+
+;P00021;;Rin Advanced Detergent Powder;Rin Advanced Detergent Powder;The Yellow Fighters in Rin Advanced Detergent Powder penetrate deep into the fibres and remove stubborn dirt particles to give you flawless white clothes that help your loved ones shine! Rin Detergent Powder removes dirt from deep within the cloth fibre, thereby removing dullness from your clothes. Rin Detergent Powder comes with Bright Clean Technology making your clothes look 'Bright like new'. Rin, Unilever’s mid-tier laundry detergent brand, believes that everyone is talented and it is the lack of opportunities or prejudices of others that stand in the way. Rin believes that nothing should come in the way of your shine. Each one of you has the talent and deserves an opportunity to shine. Rin promises to make your clothes whiter and brighter so that you can get the confidence to stride ahead on your journey to progress. Rin enables the people it serves, shine by giving them brighter cleaner clothes. 
+
+;P00022;;Exo Dishwash Bar;Exo Dishwash Bar;Exo Dish Shine Round makes your vessels odorous and removes stain. The fast action formula with the hyper-cleaning technology quickly removes the toughest of stains and makes your vessels shine like never before. This dish washing bar does not leave traces on the vessel and hence it can be easily washed. It works hard on grease and stains, keeping your utensils fresh and shining. It contains many anti-microbial agents that keep your vessels away from dirt and microbes which do not create pealing or itching of your skin.
+
+;P00023;;Vim Dishwash Liquid Gel Lemon Bottle;Vim Dishwash Liquid Gel Lemon Bottle;Vim is the No.1 dishwashing brand in India. Vim’s Dishwash Liquid Gel is a concentrated gel containing the power of 100 lemons(power refers to the cleaning benefits of lemons). It cleans the utensils deeply and unlike dishwash bars, it does not leave any powdery white layer of residue behind on them. It provides great value for money as only one spoon of Vim Liquid Dishwash Gel is enough to clean one sink-full of dirty utensils(as per the independent lab test conducted). Vim Liquid Dishwash Gel also helps you to remove the stubborn malodours from your tiffin boxes. It provides a pleasant cleaning experience and gives a refreshing lemon fragrance during dishwash. Its pH neutral formula is soft on hands compared to other bars. It can safely be used to clean delicate utensils and all kinds of expensive crockery including the non-stick cookware. It does not leave any scratches on the surfaces and keeps the utensils looking new. It is extremely convenient to use. Just take a spoonful of Vim Dishwash Liquid Gel, mix it in a bowl of water and use the mixture to wash an entire sink-full load of dishes. 
+
+;P00024;;Dew Fresh Dishwash Tub - Ginger and Lemon;Dew Fresh Dishwash Tub - Ginger and Lemon;Dew Fresh Dishwash Tub helps you to remove the stubborn malodours from your tiffin boxes.It can safely be used to clean delicate utensils and all kinds of expensive crockery including the non-stick cookware. It does not leave any scratches on the surfaces and keeps the utensils looking new.
+
+;P00025;;MTR Masala - Spicy Sambar Powder;MTR Masala - Spicy Sambar Powder;MTR Sambar Powder 100 g MTR Sambar Powder is a delicious spice blend commonly used in South Indian dishes and in many varieties of vegetables. Various commonly made food items like idli, vadas, dosas, find Sambar Powder as an inevitable blend.
+
+;P00026;;Everest Garam Masala;Everest Garam Masala;Everest presents their authentic range of masalas that are blended with a wide variety of handpicked and selected spices that bring a whole new flavour and meaning to your dishes.
+
+;P00027;;Eastern Chicken Masala;Eastern Chicken Masala;Eastern Chicken Masala 100 g Eastern Chicken Masala is a spicy masala that gives you restaurant-style chicken dishes in minutes. It's a blend of fresh and aromatic spices that give your recipe that quintessential golden hue and irresistible aroma.
+
+;P00028;;India Gate Basmati Rice Classic;India Gate Basmati Rice Classic;India Gate classic is an exotic class of Basmati. It embodies all the attributes of a true Basmati Rice Grain. It is pearl white grain, smooth, extra long and extra fine. It will be an important part of all quality rice recipes and on your platter to relish. On cooking, the grains fluff up to other than twice the unique length; and won't stick together or break.
+
+;P00029;;Fortune Sona Masoori Supreme Rice;Fortune Sona Masoori Supreme Rice;Fortune Sona Masoori rice is known to have small percentages of protein while being low in fat and cholesterol. Furthermore, it is a good source of carbohydrates. Incorporate the goodness of Sona Masoori rice in your diet which will satisfy your rice cravings along with enriching your diet. It is lightweight and sweet-smelling and measured to be of the finest quality. It has a distinctive taste that is not matched by rice from any other region. It is the tastiest of all the Sona Masoori rice available in the state.
+
+;P00030;;Nutritious Brown Rice Unpolished;Nutritious Brown Rice Unpolished;Brown rice is healthier than white rice as it has lower calories, more minerals, more fibre, and more healthy fats than white rice ·Good source of magnesium, phosphorus, selenium, thiamin, niacin, vitamin B6 and an excellent source of manganese.
+
+;P00031;;Safe Harvest Tur Dal;Safe Harvest Tur Dal;Safe Harvest Pesticide Free Goodness Tur Dal/ Arhar Dal, Natural, Chemical Free, Vegan, Gluten Free. Tur Dal is also known as arhar dal or red gram. It is rich in protein, potassium, phosphorus, magnesium and calcium. Good Sources of Vitamins C, E, K and B complex along with minerals magnesium, manganese, phosphorus, potassium, sodium, zinc. It helps to maintain the ideal body weight.
+
+;P00032;;Town Grocer Raw Peanuts;Town Grocer Raw Peanuts;These premium-quality peanuts are sourced from organic farms, ensuring their purity and nutritional value. With their rich taste, they make a satisfying snack on their own or can be used in various recipes like salads, stir-fries, and peanut butter. Packed with protein, healthy fats, and essential nutrients, these organic raw peanuts are a wholesome addition to your diet. 
+
+;P00033;;Popular Essentials Urad Gola White;Popular Essentials Urad Gola White;Popular Essentials Urad Dal is a protein-rich dal for vegetarians and for strong bones and a healthy body. It is good for digestion and also prevents constipation. It is free of synthetic chemicals and pesticides.
+
+;P00034;;Freedom Refined Sunflower Oil;Freedom Refined Sunflower Oil;Freedom Refined Sunflower Oil is usually used for roasting, stir-frying and deep-frying due to its high smoke point. This means you can roast or fry at higher temperatures before the oil starts to smoke.
+
+;P00035;;Saffola Gold Oil;Saffola Gold Oil;Saffola Gold Oil can has a good balance of MUFA & PUFA with a specially designed anti-oxidant system that helps improve immunity and helps maintain healthy cholesterol levels.
+
+;P00036;;Organic Tattva Peanut Oil;Organic Tattva Peanut Oil;Unfiltered/ Non-Refined oil made from traditional technique and is relatively healthier than filtered oil available in market.
+
+;P00037;;Carrot;Carrot;A popular sweet-tasting root vegetable, Carrots are narrow and cone shaped.They have thick, fleshy, deeply colored root, which grows underground, and feathery green leaves that emerge above the ground. While these greens are fresh tasting and slightly bitter, the carrot roots are crunchy textured with a sweet and minty aromatic taste.
+
+;P00038;;Cabbage;Cabbage;With a texture of crispness and juiciness the moment you take the first bite, cabbages are sweet and grassy flavoured with dense and smooth leafy layers.
+
+;P00039;;Beetroot;Beetroot;These edible ruby red roots are smooth and bulbous and have the highest sugar content than any other vegetable.
+
+;P00040;;Apple;Apple;Apples are one of the healthiest fruits. Rich in vitamin C and dietary fiber which keep our digestive and immune system healthy.Protects from Alzheimers, type 2 diabetes and cancer. It is a natural teeth whitener and prevent bad breath.
+
+;P00041;;Banana;Banana;Relish the soft, buttery texture of Robusta bananas that are light green and have a great fragrance and taste.The stalks of Robustas are thick and rigid. Fresh fruits are green, which revolve to a bright yellow on ripening and the flesh contains a white - ceramic colour. Fresho Robusta are fine quality, sweet flavored, mushy and soft bananas.
+
+;P00042;;Grapes;Grapes;Grapes are rich in vitamins A, C & K. They relieve constipation, indigestion and treat kidney disorders. Also triggers weight loss and protects against cancer, heart and nerve diseases.Grape seeds are edible. They are also known for improving skin, heart and oral health, while also strengthening bones.
+
+;P00043;;Pomegranate Shelled;Pomegranate Shelled;Pomegranate is a rich supplier of soluble and insoluble dietary fibers, vitamin K, C, minerals and B-complex vitamins such as B5, B6.Pomegranate juice lowers bad cholesterol and raises good cholesterol.Reduces the risk of heart stoke.Gives a boost of energy and freshness. So, this is specially recommended for women during menopause.Good for pregnant women as it prevents brain damage in infants.
+
+;P00044;;Papaya Diced;Papaya Diced;Papayas grow in tropical climates and are also known as papaws or pawpaws. Initially green and somewhat bitter in taste, papayas are butter-yellow when fully ripe and shaped like a pear.Papaya is rich in anti-oxidants and phytonutrients that work against free radicals and therefore is said to protect the body from possible heart diseases and cancer.
+
+;P00045;;Pineapple Slice;Pineapple Slice;With the shape of a pine cone, the fruit is loosely fibrous and juicy with white to yellowish flesh.The edible center part is firm, leathery and sweet.Pineapples reduce the risk of macular degeneration, a disease that affects the eyes as people age due to vitamin C and antioxidants present in it.Reduces inflammation and blood clot. Also reduces common cold and sinus inflammation. Helps develop strong bones.
+
+;P00046;;Spinach;Spinach;Palaks contain low fat and cholesterol and more amount of fiber.They lower the risk of cancer and occurance of asthma.Improves blood glucose levels in people suffering from diabetes and also improves skin and bone health.
+
+;P00047;;Mint/Pudina Aaku;Mint/Pudina Aaku;Mint leaves are tender herbs with gentle stems and have a distinct pleasant aroma, pleasing taste, cool after-sensation, and medicinal qualities.They are best used raw or added at the end of cooking in order to maintain their delicate flavor and texture.
+
+;P00048;;Curry Leaves;Curry Leaves;Curry leaves are an essential element of Indian cooking style where numerous of the traditional and modern recipes are imperfect without curry leaves.These are used as tasting agent in food for its different taste.With dark green and glossy appearance, curry leaves have a strong flavour and release a tasty aroma when fried in hot oil.
+
+;P00049;;Doritos Nacho Chips - Cheese Flavour;Doritos Nacho Chips - Cheese Flavour;Doritos Nacho Cheese Chips are the cheese loaded bites that will add some mighty crunch to your day! Experience intense flavours with a snack full of character: every bite is a reminder to live boldly and to challenge your limits. Have them on your binge-watching sprees, serve them to build the mood for your house parties, or simply indulge on them to satisfy your late-night snack cravings.
+
+;P00050;;Haldiram's Moong Dal;Haldiram's Moong Dal;Haldirams Moong Dal is prepared by using quality moong and extra ingredients. It has excellent taste and aroma. It has fibre, iron, protein, and nutrition. The finest snack compared to other snacks is Haldiram Moong Dal. 
+
+;P00051;;Pringles Chips - Desi  Masala Tadka;Pringles Chips - Desi  Masala Tadka;Pringles potato crisps contain zero transfat and offer an explode of cheddar cheese taste with each bite. The Pringles Crisps come in a resalable and moveable can for expedient freshness, even on the go.
+
+;P00052;;Swastiks  Mango Pickle Avakaya;Swastiks  Mango Pickle Avakaya;A tender slice of the delicious mango that has soaked in the essential flavours of chillies and other spices to give you an irresistible taste. Mango pickle is a mixture of juicy green mangoes with authentic spices. It is arranged from mango and extra spices. This raw mango delight is completed for anyone and everyone who is mad about mangoes. 
+
+;P00053;;Keya Malabar Chicken Pickle;Keya Malabar Chicken Pickle;Keya Pickles brings you a range of pickles prepared from secret recipes from different parts of India. Perfected over many years, these stimulating and mouth-watering pickles add zing to your food. Just add a dollop of Keya pickles to kulchas, parathas, pulao, bread or rice and take pleasure in a completely new taste.
+
+;P00054;;Priya Gongura Pickle;Priya Gongura Pickle;Tempting Taste Made Naturally. For ages, Gongura has been a proud possession in the hearts & kitchens of Telugu people. Our Priya represents the essence of this signature Telugu pickle “Gongura” processed with specially sourced leaves and no one else bottles it finest than Priya Foods. With specially sourced plant leaves and expertly prepared pickles, Priya Gongura pickles will breach the boundaries of bliss.
+
+;P00055;;Kellogg's Corn Flakes;Kellogg's Corn Flakes;Kelloggs Corn Flakes cereal is the Original & Best cereal. Every bite of these crispy, golden flakes is just as delicious as the first. Youll be on your way to a great day when you pour a bowl of Kelloggs Corn Flakes cereal into your breakfast bowl.
+
+;P00056;;Alpino Peanut Butter Super Oats Chocolate;Alpino Peanut Butter Super Oats Chocolate;Maintaining a high protein foods diet is not everyone's cup of tea, especially when food for strong muscles and bones ends up being mundane. We noticed that the Indian population lacks proper nutrition in their diet, we wanted to have a product which literally tasted like a jar of freshly roasted peanuts. What we achieved finally, was a spread which was not biased to any particular age group, and an essential ingredient in a healthy diet for women, men and kids. Be it a meal plan for weight loss, or pre and post-workout meals or just mid-day snacks, Alpino fits right everywhere. Alpino offers different peanut butter flavours to end the tug of war between health and desserts.
+
+;P00057;;Britannia 100% Whole Wheat Bread;Britannia 100% Whole Wheat Bread;Milled from 100% whole grains of wheat, this bread is low in saturated fat and doubles up as a good source of fibre.Whether you live to eat or eat to live, it's best when it's done right. Britannia's range of wholesome and delicious bread is filled with the goodness you need to keep your body healthy and happy.
+
+;P00058;;Sunfeast YiPPee! Magic Masala;Sunfeast YiPPee! Magic Masala;Sunfeast Yippee Magic Masala Is A Lip Smacking Noodle. The Immediate Noodles Segment Brings To You Sunfeast Yippee Masala Noodles. Easy To Make And Delicious To Eat, It Makes A Great Breakfast Meal For Those Pressed For Time. Even As An Evening Bite, Mothers Find It Suitable To Make It For Their Kids. This Round Noodle Block Is Truly Wonderful.
+
+;P00059;;Borges Spaghetti Durum Wheat Pasta;Borges Spaghetti Durum Wheat Pasta;Borges Spaghetti Pasta is made from superior wheat, making it a nutritious choice. You can enjoy this pasta as a snack or even as a wholesome meal.
+
+;P00060;;MTR Multigrain Dosa;MTR Multigrain Dosa;MTR Dosa Breakfast Mix is ready made breakfast cereal that keeps your time and suggests you breakfast with a great flavor. Get pleasure from a strong breakfast in a less time since MTR Dosa Breakfast Mix is ready for you to serve a pleasant, crunchy dosas.
+
+
